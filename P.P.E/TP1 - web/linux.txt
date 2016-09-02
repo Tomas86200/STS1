@@ -1,0 +1,13 @@
+Linux pour tous ! 
+
+Présentation
+
+Linux, appellation courante du système d'exploitation libre GNU/Linux, est une variante du système GNU, fonctionnant avec le noyau Linux. 
+C'est une implémentation libre du système UNIX respectant les spécifications POSIX. 
+Linux s'impose aujourd'hui comme une alternative libre aux systèmes propriétaires Microsoft Windows et Mac OS X. Il existe d'autres alternatives libres, parmi lesquelles FreeBSD, NetBSD et OpenBSD. Il permet le fonctionnement de tout type d'applications comme les navigateurs web, les systèmes de gestion de base de données, les clients de messagerie, les environnements de bureau, les logiciels de retouche et de traitement d'images, les jeux, etc. Certains logiciels propriétaires peuvent également fonctionner sous Linux.
+Le système avec toutes ces applications est ainsi distribué sous l'appellation « distribution Linux », parmi lesquelles, Ubuntu, Red Hat, Debian, Slackware... 
+Linux et la sécurité
+Linux permet une stricte séparation des privilèges. Une des conséquences est qu’un ver ou un virus informatique  ne peut accéder qu’à une partie des ressources et fonctionnalités d’un système Linux, mais ni aux données importantes du système, ni aux données d’éventuels autres utilisateurs.
+Dans le domaine des serveurs, le degré de sécurité dépend, par comparaison, avant tout du degré d’expérience qu’a l’administrateur systèmes. Là, Linux marque des points grâce à sa liberté d’utilisation, qui permet sans risque et sans surcoût de tester abondamment divers scénarios sur d’autres ordinateurs, et d’y acquérir ainsi une expérience utile.
+Il existe une série de distributions spécifiquement axées sur la sécurité, et des initiatives telles que SELinux de la National Security Agency. Mais il existe également une série de distribution axée sur l’anti-sécurité, comme Damn Vulnerable Linux ou BackTrack, pour sensibiliser les experts aux problématiques de sécurité sur ce système d’exploitation.
+Répetez après moi : j'aime Linux ;-) 

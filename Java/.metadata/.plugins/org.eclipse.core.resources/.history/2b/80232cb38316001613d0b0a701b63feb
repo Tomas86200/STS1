@@ -1,0 +1,38 @@
+
+public class Lanceur 
+{
+	public static void main(String[] args)
+	{
+		Visite Desanneeslumieres;
+		Desanneeslumieres = new Visite("Il y a très longtemps....", "Mr Palpoutine");
+		
+		Etablissement EtoileNoire;
+		EtoileNoire= new Etablissement("Je suis ton père", "Dans une galaxie lointaine,très lointaine....", "Lord Vader");
+		
+		Region Space;
+		Space = new Region(3396,"Système Daggobah", EtoileNoire);
+		
+		Organisation Sith
+		Sith= new Organisation("Sith","Le côté obscur",Space);
+		
+		System.out.println("------  INFORMATIONS SUR L'ORGANISATION  ------");
+		System.out.println("- NOM: "+ Sith.getNom());
+		System.out.println("-ADRESSE : "+ Sith.getAdresse());
+		System.out.println("-Region: "+ Sith.getLaRegion().getNom());
+		System.out.println("-----------------------------------------------");
+		System.out.println("------  INFORMATIONS SUR L'ETABLISSEMENT  -----");
+		System.out.println("-CODE: "+ EtoileNoire.getCode());
+		System.out.println("-ADRESSE: " + EtoileNoire.getAdresse());
+		System.out.println("-PROSPECTEUR: " + EtoileNoire.getProspecteur());
+		System.out.println("-----------------------------------------------");
+		System.out.println("-------  INFORMATIONS SUR LA REGION  ----------");
+		System.out.println("-NUMERO: " + Space.getNumero());
+		System.out.println("-NOM: " + Space.getNom());
+		System.out.println("-ETABLISSEMENT: " + Space.getLeEtablissement().getCode());
+		System.out.println("-----------------------------------------------");
+		System.out.println("---------  INFORMATIONS SUR LA VISITE  --------");
+		System.out.println("-DATE: " + Desanneeslumieres.getDateVisite());
+		System.out.println("-PROSPECTEUR: " + Desanneeslumieres.getProspecteur());
+		System.out.println("-----------------------------------------------");
+	}
+}

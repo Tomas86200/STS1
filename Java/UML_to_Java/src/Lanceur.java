@@ -1,0 +1,64 @@
+import java.util.ArrayList;
+
+
+public class Lanceur 
+{
+	public static void main(String[] args)
+	{
+		Visite Desanneeslumieres;
+		Desanneeslumieres = new Visite("Il y a très longtemps....", "Mr Palpoutine");
+		
+		Etablissement EtoileNoire;
+		EtoileNoire= new Etablissement("Je suis ton père", "Dans une galaxie lointaine,très lointaine....", "Lord Vader");
+		
+		Region Space;
+		Space = new Region(3396,"Système Daggobah", EtoileNoire);
+		
+		Organisation Sith;
+		Sith= new Organisation("Sith","L'académie de Korriban",Space);
+		
+		Organisation Jedi;
+		Jedi= new Organisation("Jedi","Le temple Jedi de Coruscant",Space);
+		
+		Organisation Rebelles;
+		Rebelles = new Organisation("Rebelles","Base secrète de Hoth",Space);
+		
+		Organisation Empire;
+		Empire = new Organisation("Empire","Ils sont partout !",Space);
+		
+		Space.ajoutOrganisation(Sith);
+		Space.ajoutOrganisation(Jedi);
+		Space.ajoutOrganisation(Rebelles);
+		Space.ajoutOrganisation(Empire);
+		
+		System.out.println("------  INFORMATIONS SUR L'ORGANISATION  ------");
+		System.out.println("- NOM: "+ Sith.getNom());
+		System.out.println("-ADRESSE : "+ Sith.getAdresse());
+		System.out.println("-REGION: "+ Sith.getLaRegion().getNom());
+		System.out.println("_______________________________________________");
+		System.out.println("------  INFORMATIONS SUR L'ETABLISSEMENT  -----");
+		System.out.println("-CODE: "+ EtoileNoire.getCode());
+		System.out.println("-ADRESSE: " + EtoileNoire.getAdresse());
+		System.out.println("-PROSPECTEUR: " + EtoileNoire.getProspecteur());
+		System.out.println("_______________________________________________");
+		System.out.println("-------  INFORMATIONS SUR LA REGION  ----------");
+		System.out.println("-NUMERO: " + Space.getNumero());
+		System.out.println("-NOM: " + Space.getNom());
+		System.out.println("-ORGANISATIONS: ");
+		
+		ArrayList<Organisation> Stormtroopers;
+		Stormtroopers = new ArrayList(Space.getLesOrganisations());
+		
+		for(Organisation Soldat : Stormtroopers)
+		{
+			System.out.println("|           - " + Soldat.getNom() + " se trouve : "+ Soldat.getAdresse());
+		}
+		
+		System.out.println("-ETABLISSEMENT: " + Space.getLeEtablissement().getCode());
+		System.out.println("_______________________________________________");
+		System.out.println("---------  INFORMATIONS SUR LA VISITE  --------");
+		System.out.println("-DATE: " + Desanneeslumieres.getDateVisite());
+		System.out.println("-PROSPECTEUR: " + Desanneeslumieres.getProspecteur());
+		System.out.println("_______________________________________________");
+	}
+}
