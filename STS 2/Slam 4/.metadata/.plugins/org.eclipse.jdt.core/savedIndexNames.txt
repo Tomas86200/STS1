@@ -1,0 +1,5 @@
+INDEX VERSION 1.126+Q:\STS 2\Slam 4\.metadata\.plugins\org.eclipse.jdt.core
+3471572108.index
+2072567028.index
+2211853542.index
+1308669886.index

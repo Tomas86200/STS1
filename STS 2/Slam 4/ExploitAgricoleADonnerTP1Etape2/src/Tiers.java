@@ -1,0 +1,43 @@
+
+public class Tiers {
+	private String nom;
+	private String adresse;
+	//private Commune uneCommune;
+	
+	public Tiers(String nom, String adresse) {
+		this.nom = nom;
+		this.adresse = adresse;
+		//this.setUneCommune(uneCommune);
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
+
+	@Override
+	public String toString() {
+		return "Tiers [nom=" + nom + ", adresse=" + adresse +  "]";
+	}
+
+	/*public Commune getUneCommune() {
+		return uneCommune;
+	}
+
+	public void setUneCommune(Commune uneCommune) {
+		this.uneCommune = uneCommune;
+	}
+*/
+	
+}

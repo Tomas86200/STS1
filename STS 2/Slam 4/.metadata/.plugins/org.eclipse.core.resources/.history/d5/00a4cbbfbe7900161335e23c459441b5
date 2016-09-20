@@ -1,0 +1,40 @@
+import java.util.Date;
+
+
+public class GAEC extends Exploitation {
+	private int dureeEnAnnee;
+	private float capital;
+	
+	
+
+	public GAEC(String nom, String adresse, int noExploitation, Date dateDebut, int dureeEnAnnee, float capital) {
+		super(nom, adresse, noExploitation, dateDebut);
+		this.dureeEnAnnee = dureeEnAnnee;
+		this.capital = capital;
+	}
+
+	public int getDureeEnAnnee() {
+		return dureeEnAnnee;
+	}
+
+	public void setDureeEnAnnee(int dureeEnAnnee) {
+		this.dureeEnAnnee = dureeEnAnnee;
+	}
+
+	public float getCapital() {
+		return capital;
+	}
+
+	public void setCapital(float capital) {
+		this.capital = capital;
+	}
+
+	@Override
+	public String toString() {
+		return "GAEC [dureeEnAnnee=" + dureeEnAnnee + ", capital=" + capital
+				+ ", toString()=" + super.toString() + "]";
+	}
+	
+	
+	
+}

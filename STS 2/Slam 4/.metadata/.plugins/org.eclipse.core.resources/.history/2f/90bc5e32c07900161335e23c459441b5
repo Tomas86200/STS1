@@ -1,0 +1,45 @@
+
+public class Parcelle {
+	private int noCadastralEtendu;
+	private float surfaceParcelleHa;
+	private float surfaceClasseHa;
+	
+	public Parcelle(int noCadastralEtendu, float surfaceParcelleHa,
+			float surfaceClasseHa) {
+		this.noCadastralEtendu = noCadastralEtendu;
+		this.surfaceParcelleHa = surfaceParcelleHa;
+		this.surfaceClasseHa = surfaceClasseHa;
+	}
+
+	public int getNoCadastralEtendu() {
+		return noCadastralEtendu;
+	}
+
+	public void setNoCadastralEtendu(int noCadastralEtendu) {
+		this.noCadastralEtendu = noCadastralEtendu;
+	}
+
+	public float getSurfaceParcelleHa() {
+		return surfaceParcelleHa;
+	}
+
+	public void setSurfaceParcelleHa(float surfaceParcelleHa) {
+		this.surfaceParcelleHa = surfaceParcelleHa;
+	}
+
+	public float getSurfaceClasseHa() {
+		return surfaceClasseHa;
+	}
+
+	public void setSurfaceClasseHa(float surfaceClasseHa) {
+		this.surfaceClasseHa = surfaceClasseHa;
+	}
+
+	@Override
+	public String toString() {
+		return "Parcelle [noCadastralEtendu=" + noCadastralEtendu
+				+ ", surfaceParcelleHa=" + surfaceParcelleHa
+				+ ", surfaceClasseHa=" + surfaceClasseHa + "]";
+	}
+	
+}

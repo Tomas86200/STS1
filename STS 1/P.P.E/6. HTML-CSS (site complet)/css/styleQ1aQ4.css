@@ -1,0 +1,151 @@
+hml, body{
+	margin-left: auto;
+	margin-right: auto;
+	padding:0px;
+	width: 900px;
+	min-height: 100%;
+	font-family: sans-serif;
+	background:#eeeefb;
+}
+
+
+
+#contenu-page{
+	display:table;
+	position:relative;
+	width: 900px;
+	height:98vh;
+}
+
+
+
+#header{
+	display:block;
+	height:140px;
+	padding: 2px;			/* marge intérieure */
+	padding-right:8px;
+	margin-bottom: 0px;		/* marge extérieure (bas) */
+	background-image: url(../img/bandeau.jpg);
+	background-repeat: no-repeat;
+	text-align: right;
+	line-height:245px;
+	font-size:95%;
+	font-weight:bold;
+}
+
+
+
+
+#milieu{
+	display: table-row;
+	height:100%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color:white;
+}
+
+
+
+/* =============================== */
+#menu{
+	display:table-cell;
+	float: left;
+	padding: 0px;
+	padding-right: 2px;
+	width: 22%;
+	height:100%;
+	background:linear-gradient(to bottom, #e3ecef, transparent, transparent);
+	border-right-width:1px;
+	border-right-color:#557766;
+	border-right-style:dotted;
+}
+
+#liste-menu{
+	list-style-type: none;
+	line-height:200%;
+	padding:0px;
+}
+
+
+.element-Menu{
+	padding:2px;
+	padding-left:12px;
+}
+
+.element-Menu:hover{
+	background:linear-gradient(to right,#ff6151,#ff7161);
+}
+
+
+
+
+.element-Menu-Actif{
+	background:linear-gradient(to right,#303040,#626262);
+	color: white;
+	padding:2px;
+	padding-left:22px;
+	font-style:italic;
+	
+}
+
+.element-Menu-Actif:hover{
+	background:linear-gradient(to right,#906050,#908080);
+	color:#e0e0e0;
+}
+
+
+.lien-menu{
+	text-decoration:none;
+	color:#101010;
+	font-weight: bold;
+}
+
+.lien-menu:hover{
+	text-decoration:underline;
+	color:#ffe0e0;
+}
+
+.lien-menu:visited{
+	text-decoration:underline;
+	color:blue;
+	font-weight: bold;
+}
+/* =============================== */
+
+
+
+
+#contenu{
+	display: table-cell;
+	padding-left:7px;
+	padding-right:7px;
+	padding-top:10px;
+	width:76%;
+	float: right;
+	height:100%;
+}
+
+
+
+
+#footer{
+	display: block;
+	margin-bottom:0px;
+	text-align:center;
+	font-size:70%;
+	font-family: serif;
+	line-height: 25%;
+	border-top-width:1px;
+	border-top-color:#557766;
+	border-top-style:dotted;
+}	
+
+
+	
+a{
+	color:#14e;
+}
+
+a:hover{
+	color:#ff6040;
+}

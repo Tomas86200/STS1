@@ -1,0 +1,28 @@
+import java.util.Date;
+
+
+public class Associe extends PersonnePhysique {
+	private int NbParts;
+
+	public Associe(String prenom, Date dateNaissance, int nbParts) {
+		super(prenom, dateNaissance);
+		setNbParts(nbParts);
+	}
+
+	public int getNbParts() {
+		return NbParts;
+	}
+
+	public void setNbParts(int nbParts) {
+		NbParts = nbParts;
+	}
+
+	@Override
+	public String toString() {
+		return "Associe [NbParts=" + NbParts + ", toString()="
+				+ super.toString() + "]";
+	}
+	
+	
+
+}
