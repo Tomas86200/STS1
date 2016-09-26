@@ -1,0 +1,22 @@
+
+public class Impot implements IImpot {
+	public Impot(){
+		
+	}
+
+	public float getCoefB(String dept) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public float getCoefA(String classification) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public float getCoefC() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}

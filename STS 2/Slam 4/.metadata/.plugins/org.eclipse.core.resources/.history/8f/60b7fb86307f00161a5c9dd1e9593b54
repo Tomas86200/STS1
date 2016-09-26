@@ -1,0 +1,5 @@
+public interface IImpot {
+	public float getCoefB(String dept);
+	public float getCoefA(String classification);
+	public float getCoefC();
+}

@@ -1,0 +1,11 @@
+
+public class Impot implements IImpot {
+	public Impot(){
+		
+	}
+	public float getCoefA(String classification) {
+		float coef;
+		
+		return coef;
+	}
+}
