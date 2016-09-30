@@ -1,62 +1,39 @@
 <?php
-
-	class Utilisateur{
-		private $id;
-		private	$motDePasse;
-		private $pseudo;
-		private $email;
+	include('Model.php');
+	
+	class utilisateur extends Model {
+		protected $idutilisateur;
+		protected $mdputilisateur;
+		protected $pseudoutilisateur;
+		protected $emailutilisateur;
 		
-		public function __construct($pseudo, $motDePasse, $email){
-			$this->id = $id;
-			$this->pseudo = $pseudo;
-			$this->motDePasse = $motDePasse;
-			$this->email = $email;
+		//Attributs techniques
+		protected $table = 'utilisateur';
+		protected $pk = 'idutilisateur'; 
+		
+		public function __construct($idutilisateur, $pseudoutilisateur, $motDePasseutilisateur, $emailutilisateur){
+			$this->idutilisateur = $idutilisateur;
+			$this->pseudoutilisateur = $pseudoutilisateur;
+			$this->mdputilisateur = $motDePasseutilisateur;
+			$this->emailutilisateur = $emailutilisateur;
+			$this->table = "utilisateur";
+			$this->pk = "idutilisateur";
 		}
 		public function getId(){
-			return $id;
+			return $this->idutilisateur;
 		}
 
 		public function getPseudo(){
-			return $pseudo;
+			return $this->pseudoutilisateur;
 		}
 		
 		public function getMotDePasse(){
-			return $motDePasse;
+			return $this->motDePasseutilisateur;
 		}
 
 		public function getEmail(){
-			return $email;
-		}
-		
-			private function connexion(){
-			$host = "localhost";	
-			$nomdb = "forum";
-			$user ="postgres";
-			$mdp = "pgadmin";
-		
-		
-		try{
-			$db = new PDO("pgsql:host=".$host.";dbname=".$nomdb, $user, $mdp);
-		}
-		catch{
-			print "ERREUR : ".$getMessage()."<br/>";
-			die();
-		}
-	}
-	
-	public function createUtilisateur($utilisateur){
-		$db = connexion();
-		
-		//$id = $utilisateur-> ;
-		$pseudo = $utilisateur->pseudo;
-		$mdp = $utilisateur->mdp;
-		$email = $utilisateur->email;
-		
-		$requete = "INSERT INTO UTILISATEUR(pseudoUtilisateur, mdpUtilisateur,emailUtilisateur)
-					VALUES ('{tintin}', '{secret}','{abc@opml.fr}');";
-					
-		$bd->query($requete);
-	}
+			return $this->emailutilisateur;
+		}	
 
 	}
 ?>

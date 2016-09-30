@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 
 <?php
-	include '\kernel\utilisateurModel.php';
+	include ('\kernel\utilisateurModel.php');
 			
-	echo "Création de l'utilisateur";
+	echo "Création de l'utilisateur<br/>";
 			
-	$Arcanin = new Utilisateur("Arcanin","jesuisgenial", "arcanin@pokemon-nintendo.jap");
+	$Arcanin = new Utilisateur(3,"","", "");
 		
-	echo "Vous êtes enregistrés !";
+	echo "Vous êtes enregistrés !<br/>";
 			
-	echo "Votre pseudo :".$Arcanin.getPseudo();
-	echo "Votre email :".$Arcanin.getEmail();
+	/*echo "Votre pseudo :".$Arcanin->getPseudo()."<br/>";
+	echo "Votre email :".$Arcanin->getEmail();
+	
+	$Arcanin->createUtilisateur();*/
+	
+	$Arcanin->read(1);
+	
+	echo "<br/><br/>";
+	print_r($Arcanin);
+	$a = $Arcanin->find("pseudoutilisateur='Arcanin'");
+	print_r($a);
+	
+	
+	
+	/*echo "<br/>".
+	"ID : ".
+	$infos['idutilisateur'].
+	"<br/>".
+	"Pseudo : ".
+	$infos['pseudoutilisateur'].
+	"<br/>".
+	"Email : ".
+	$infos['emailutilisateur'];*/
+	
+	//$Arcanin->delete(4);
+	
+	
+	
 ?>
