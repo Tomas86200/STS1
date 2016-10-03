@@ -126,3 +126,69 @@ having sum(nbpages) = (select max(somme.nbpages) from somme);
 
 /*Question 13*/
 
+select u.codeutilisateur, u.nomutilisateur
+from utilisateur u
+inner join utiliser ut
+on ut.codeutilisateur = u.codeutilisateur
+where ut.dateheure between '2010-05-01' and '2010-05-31';
+
+/* Question 14 */
+
+select codeutilisateur, nomutilisateur
+from utilisateur
+where nomutilisateur like 'D%';
+
+/* Question 15 */
+
+select i.nomimprimante, extract (month from ut.dateheure) as month, sum(ut.nbpages) as nbpages
+from utiliser ut
+inner join imprimante i
+on u.codeimprimante = i.codeimprimante
+group by i.codeimprimante, i.nomimprimante, month;
+
+/* Question 16 */
+
+select u.codeutilisateur, u.nomutilisateur
+from utilisateur u
+where u.codeutilisateur not in (
+												select ut.codeutilisateur
+												from utiliser ut
+											);	 
+
+/* Question 17 */
+
+select distinct codeutilisateur
+from utiliser
+group by codeutilisateur
+having count (distinct codeimprimante) = (Select count (*) from imprimante);
+
+/* Question 18 */
+
+select distinct u.codeutilisateur,u.nomutilisateur
+from utilisateur u
+inner join utiliser ut
+on ut.codeutilisateur = u.codeutilisateur
+inner join imprimante i
+on i.codeimprimante = ut.codeimprimante
+where bureau = nomimprimante;
+
+/* Question 19 */
+
+select count (distinct codeutilisateur)
+from utiliser
+where codeutilisateur not in (
+	select u.codeutilisateur
+	from utilisateur u
+	inner join utiliser ut
+	on u.codeutilisateur = ut.codeutilisateur
+	inner join imprimante i
+	on ut.codeimprimante = i.codeimprimante
+	where u.bureau != i.nomimprimante; 
+	)
+
+/* Question 20 */
+
+select to_char (dateheure, 'Mon') as mois, count(*)
+from utiliser
+where dateheure between '01-01-2010' and '31-12-2010'
+group by mois;

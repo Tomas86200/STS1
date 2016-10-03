@@ -1,3 +1,5 @@
+/* Question 1 */
+
 Select s.nom
 	from salarie s
 	inner join operateur o
@@ -13,6 +15,7 @@ Select s.nom
 		on c.code = co.code
 	where co.libelle = 'Test de fonctionnement du poste soudure.';
 
+/*Question 2 */
 	
 select count (*) as NbProduit,LigneProduit_nom
 	from Produit p
@@ -20,6 +23,7 @@ select count (*) as NbProduit,LigneProduit_nom
 		on referenceLigne = referenceProduit
 	group by LigneProduit_code, LigneProduit_nom;
 
+/* Question 3 */
 	
 select s.matricule,s.nom,s.prenom, count (e.matricule) as nbsuperviseur
 	from salarie s
@@ -29,11 +33,21 @@ select s.matricule,s.nom,s.prenom, count (e.matricule) as nbsuperviseur
 		on sup.matricule = e.equipe
 	group by s.matricule,s.nom,s.prenom
 
-select d.numero, d.libelle,count(*)
+/*Question 4*/	
+	
+select d.*, /* count(*) */
 		from diplome d 
 		inner join operateur o 
 			on d.numero = o. numeroD
-		group by d.numero
+		group by d.numero, d.libelle
+		having count(*) > 10;
 		
-		
-	
+/* Question 5 */
+
+select u.*
+	from unite_production u
+	inner join ligne_produit lp
+		on u.codeUnite = lp.codeUnite
+	where lp.referenceLigne like 'L1%';
+
+/* 	
