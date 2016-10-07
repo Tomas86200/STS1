@@ -62,26 +62,5 @@ public class GAEC extends Exploitation {
 		return laSaucisse;
 	}
 	
-	public Associe removeAssocie(Associe unAssocie){
-		Associe Ohisse;
-		if (this.lesAssocies.contains(unAssocie)){
-			Ohisse = unAssocie;
-			this.lesAssocies.remove(unAssocie);
-		}
-		else {
-			Ohisse = null;
-		}
-		return Ohisse;
-	}
 	
-	public void AllAssocie(){
-		this.lesAssocies.clear();
-	}
-	
-	public Associe getAssocie(int index){
-		Associe laSaucisse;
-		if (index >= 0 && index < this.lesAssocies.size()){
-			laSaucisse = this.lesAssocies.get(index);
-		}
-	}
 }

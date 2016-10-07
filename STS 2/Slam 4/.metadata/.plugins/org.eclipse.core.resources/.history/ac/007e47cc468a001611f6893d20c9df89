@@ -78,10 +78,5 @@ public class GAEC extends Exploitation {
 		this.lesAssocies.clear();
 	}
 	
-	public Associe getAssocie(int index){
-		Associe laSaucisse;
-		if (index >= 0 && index < this.lesAssocies.size()){
-			laSaucisse = this.lesAssocies.get(index);
-		}
-	}
+	
 }

@@ -50,4 +50,6 @@ select u.*
 		on u.codeUnite = lp.codeUnite
 	where lp.referenceLigne like 'L1%';
 
-/* 	
+/* Question 6 */
+
+	
