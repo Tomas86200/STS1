@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 
 <?php
+	include ('\kernel\Model.php');
 	include ('\kernel\utilisateurModel.php');
-			
-	echo "Création de l'utilisateur<br/>";
-			
-	$Arcanin = new Utilisateur(3,"","", "");
-		
-	echo "Vous êtes enregistrés !<br/>";
-			
-	/*echo "Votre pseudo :".$Arcanin->getPseudo()."<br/>";
-	echo "Votre email :".$Arcanin->getEmail();
+	include ('\kernel\Sujet.php');
+	include ('\kernel\Message.php');
+						
+	//$Arcanin = new Utilisateur(5,"Mew","lol", "mew@nintendo-pokemon.jap");
+	//$Pokemon = new Sujet(4,"","",11);
+	$Message = new Message(5,"",'','',1,1);
 	
-	$Arcanin->createUtilisateur();*/
-	
-	$Arcanin->read(1);
+	//$Pokemon->create();
+	//$Arcanin->create();
+	//$Message->create();
+
 	
 	echo "<br/><br/>";
-	print_r($Arcanin);
-	$a = $Arcanin->find("pseudoutilisateur='Arcanin'");
-	print_r($a);
+	//print_r($Arcanin);
+	//$a = $Arcanin->find("pseudoutilisateur='Pikachu'");
+	//print_r($a);
 	
+	//print_r($Pokemon);
+	//$b = $Pokemon->find("titresujet='Pokemon Go'");
+	//print_r($b);
 	
+	//print_r($Message);
+	//$c = $Message->find("idmessage=1");
+	//print_r($c);
 	
-	/*echo "<br/>".
-	"ID : ".
-	$infos['idutilisateur'].
-	"<br/>".
-	"Pseudo : ".
-	$infos['pseudoutilisateur'].
-	"<br/>".
-	"Email : ".
-	$infos['emailutilisateur'];*/
+	echo"<br/> <br/>";
+	//$Arcanin->delete(10);
+	//$Pokemon->delete(3);
+	//$Message->delete(3);
 	
-	//$Arcanin->delete(4);
+	echo "<br/> <br/>";
+	//$Arcanin->read(2);
+	//$Pokemon->read(4);
+	$Message->read(5);
+	
+	echo "<br/> <br/>";
+	//$Arcanin->update(3);
+	//$Pokemon->update(1);
+	$Message->setContenu("Salut les vieux");
+	$Message->update();
 	
 	
 	
