@@ -52,4 +52,61 @@ select u.*
 
 /* Question 6 */
 
-	
+select *
+from diplome
+where numeroD not in (select numeroD from operateur);
+
+/* Question 7*/
+
+select pt.nom, pt.numeroPoste
+from poste_travail pt
+where pt.dateinstallation =
+(select min(pt.dateinstallation) from poste_travail pt);
+
+/* Question 8 */
+
+select op.*,
+from salarie sa2
+inner join operateur op
+on sa2.matricule = op.matricule
+inner join equipe e
+on e.idequipe = op.idequipe
+inner join superviseur su
+on su.matricule = e.matricule
+inner join salarie sa
+on sa.matricule = su.matricule
+where sa.prenom LIKE 'LEON' and sa.nom LIKE 'BART';							
+
+/* Question 9 */
+
+select d.libelle, count(*)
+from diplome d
+left join operateur o
+on d.idDiplome = o.idDiplome
+group by d.idDiplome,d.libelle
+
+/*Question 10 */
+
+select pt.nomPoste, count(*) as nbproduit
+from poste_travail pt
+inner join composer c
+on pt.numeroPoste = c.numeroPoste
+inner join produit p
+on c.numeroProduit = p.numeroProduit
+group by pt.numeroPoste, pt.nomPoste
+having nbproduit < (select avg(nbProduit) 
+								from countPdt);
+								
+/* Quetion 11*/
+
+create view countPdt as 
+select count (*) as nbproduit
+from composer co
+group by co.numeroPoste;
+
+select pt.nom
+from poste_travail pt
+inner join composer co
+on pt.numeroPoste = co.numeroPoste
+group by pt.numeroPoste, pt.nom
+having count (*) = (select min(nbProduit) from countPdt);
