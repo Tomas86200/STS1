@@ -1,0 +1,10 @@
+Moodle
+CMS Education
+
+1) Qu'est-ce que BOOTSTRAP ?
+	-> origine
+	->à quoi ça sert
+
+2)Modifier le thème de Moodle en utilisant bootstrap
+
+adobe kuler

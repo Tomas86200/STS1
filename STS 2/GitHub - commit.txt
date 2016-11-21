@@ -1,0 +1,46 @@
+// POUR FAIRE DES MODIFS :
+git add *			// Ajouter tous les fichiers à un commit
+git commit -a --message "abc"	// Créer le commit
+git push origin mabranche	// Envoyer les modifications (le dernier commit)
+git pull origin mabranche	// Télécharger des modifications extérieures
+
+
+// GESTION DES BRANCHES :
+git branch mabranche		// Création d'une branche
+git checkout mabranche		// Se placer sur une branche
+git diff master..mabranche	// Permet de voir les différences entre master et mabranche
+git merge mabranche		// Permet de réintégrer mabranche dans master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Autres au cas où
+git push origin master
+git remote update
+git status
+git pull origin master
+git commit -a --message "abc"

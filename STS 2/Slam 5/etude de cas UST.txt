@@ -1,0 +1,35 @@
+4.1/ Car la methode majCump est définie en privé, on ne peut donc y accéder qu'en passant par la procédure ajoutStock ou directement dans la classe Medicament
+
+4.2/
+procédure majCump(qté : entier, condit : entier, coût : réel)
+	début
+		cump<-(cump*stock+cout)/(stock+qté*condit)
+	fin
+	
+procédure ajoutStock (qté: entier, condit: entier, coût : réel)
+		debut
+			majCump(qté,condit,coût)
+			stock<-stock + qté*condit
+		fin
+
+classe pharmacie
+	procédure ajouterLivraison (uneLivraison : Livraison)
+		debut
+			lesLivraisons.ajouter (uneLivraison)
+			uneLivraison.getMedicament().ajoutStock(uneLivraison.getqté(),uneLivraison.getcondit(),uneLivraison.getcout())
+		fin
+
+public fonction donnelePlusEconomique (qté : Entier): Medicament
+	var unmedic, lemedic : Medicament
+			cout : réel
+	debut
+			cout <- Maxvalue
+			lemedic<-null
+			pour chaque unmedic dans lesmedicaments
+				si qté<=unmedic.getstock() et unmedic.getcump() <= cout
+					alors lemedic<-unmedic
+						cout<-unmedic.getcump()
+				Fsi
+			Fpour
+			retourner (lemedic)
+	fin		

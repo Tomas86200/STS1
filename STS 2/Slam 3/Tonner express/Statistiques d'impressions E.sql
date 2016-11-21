@@ -15,7 +15,7 @@ create table Utiliser
 (
 	CodeImprimante char(6) references Imprimante(CodeImprimante),
 	CodeUtilisateur char(4) references Utilisateur(CodeUtilisateur),
-	dateheure date,
+	dateheure datetime,
 	nbpages int,
 	primary key (CodeImprimante, CodeUtilisateur, dateheure)
 ); 
